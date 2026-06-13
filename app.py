@@ -36,10 +36,10 @@ HTML = """
 <body>
 
 <div class="card">
-    <h1>🚀 CI/CD Demo Application</h1>
+    <h1>🚀 Demo project: Application Deployment </h1>
     <h2>Version 2</h2>
 
-    <p>Successfully deployed using:</p>
+    <p>Successfully deployed by Debdip Ghosh:</p>
 
     <p>
         GitHub → Jenkins → Docker → Docker Hub → Kubernetes
