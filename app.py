@@ -1,7 +1,3 @@
-from flask import Flask
-
-app = Flask(__name__)
-
 HTML = """
 <!DOCTYPE html>
 <html>
@@ -14,55 +10,91 @@ HTML = """
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
-            padding-top: 150px;
+            padding: 50px;
         }
 
         .card {
-            width: 600px;
+            width: 900px;
             margin: auto;
             background: rgba(255,255,255,0.15);
             padding: 30px;
+            border-radius: 15px;
+        }
+
+        .pipeline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .pipeline img {
+            width: 90px;
+            height: 90px;
+            background: white;
             border-radius: 10px;
+            padding: 10px;
+        }
+
+        .arrow {
+            font-size: 30px;
+            font-weight: bold;
         }
 
         .footer {
-            position: fixed;
-            bottom: 10px;
-            right: 20px;
-            font-size: 12px;
+            margin-top: 50px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <h1>🚀 Demo project: Application Deployment </h1>
+
+    <h1>🚀 CI/CD Demo Project</h1>
+
     <h2>Version 2</h2>
 
-    <p>Successfully deployed by Debdip Ghosh:</p>
-
     <p>
-        GitHub → Jenkins → Docker → Docker Hub → Kubernetes
+        Successfully deployed by <b>Debdip Ghosh</b>
     </p>
 
-    <h3>Application Running Successfully</h3>
+    <h3>CI/CD Pipeline Flow</h3>
+
+    <div class="pipeline">
+
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+
+        <div class="arrow">→</div>
+
+        <img src="https://www.jenkins.io/images/logos/jenkins/jenkins.svg">
+
+        <div class="arrow">→</div>
+
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
+
+        <div class="arrow">→</div>
+
+        <img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg">
+
+        <div class="arrow">→</div>
+
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
+
+    </div>
+
+    <h3 style="margin-top:40px;">
+        Application Running Successfully ✅
+    </h3>
+
 </div>
 
 <div class="footer">
-    Created by Debdip Ghosh
+    GitHub → Jenkins → Docker → Docker Hub → Kubernetes
 </div>
 
 </body>
 </html>
 """
-
-@app.route("/")
-def home():
-    return HTML
-
-@app.route("/health")
-def health():
-    return {"status": "UP"}
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
