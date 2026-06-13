@@ -36,8 +36,8 @@ HTML = """
 <body>
 
 <div class="card">
-    <h1>🚀 Demo project: Application Deployment </h1>
-    <h2>Version 2</h2>
+    <h1>🚀 CI/CD Demo project: Application Deployment </h1>
+    <h2>Version 1</h2>
 
     <p>Successfully deployed by Debdip Ghosh:</p>
 
